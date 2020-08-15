@@ -1,4 +1,4 @@
-module github.com/Gshamian/otus-go/hw-1
+module github.com/GShamian/otus-go/hw-1
 
 go 1.14
 
