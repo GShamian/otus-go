@@ -8,10 +8,10 @@ import (
 )
 
 func textToSlice(s string) []string {
-	//find words in text
+	// find words in text
 	inputStrings := regexp.MustCompile("\\w+").FindAllString(s, -1)
 
-	//format strings to lower case
+	// format strings to lower case
 	for i := 0; i < len(inputStrings); i++ {
 		inputStrings[i] = strings.ToLower(inputStrings[i])
 	}
@@ -22,7 +22,7 @@ func textToSlice(s string) []string {
 func mostPopularWordsInText(inputStrings []string) {
 	inputStringsInMap := make(map[string]int)
 
-	//add strings to map
+	// add strings to map
 	for i := 0; i < len(inputStrings); i++ {
 		inputStringsInMap[inputStrings[i]]++
 	}
@@ -32,7 +32,7 @@ func mostPopularWordsInText(inputStrings []string) {
 		values = append(values, val)
 	}
 
-	//sort by values of map
+	// sort by values of map
 	sort.Ints(values)
 	pointBreak := 0
 
